@@ -25,25 +25,25 @@ class App extends StatelessWidget {
       providers: serviceLocator.repositories,
       child: BlocProvider<AuthenticationBloc>(
         create: (ctx) => serviceLocator.getAuthBloc(ctx),
-        child: AppView(routeObserver),
+        child: AppRootView(routeObserver),
       ),
     );
   }
 }
 
-class AppView extends StatefulWidget {
-  AppView(this.routeObserver);
+class AppRootView extends StatefulWidget {
+  AppRootView(this.routeObserver);
 
   final NavigatorObserver routeObserver;
 
   @override
-  _AppViewState createState() => _AppViewState(routeObserver);
+  _AppRootViewState createState() => _AppRootViewState(routeObserver);
 }
 
-class _AppViewState extends State<AppView> {
+class _AppRootViewState extends State<AppRootView> {
   final NavigatorObserver routeObserver;
 
-  _AppViewState(this.routeObserver);
+  _AppRootViewState(this.routeObserver);
 
   @override
   Widget build(BuildContext context) {
