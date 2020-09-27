@@ -892,3 +892,5 @@ DerivedData/
 
 # firebase-ios
 ios/Runner/GoogleService-Info.plist
+coverage/
+.flutter-plugins-dependencies
