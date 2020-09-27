@@ -4,7 +4,6 @@ import 'package:equatable/equatable.dart';
 import 'package:flutterpoc/authentication/authentication.dart';
 import 'package:formz/formz.dart';
 
-import 'dart:developer' as dev;
 part 'login_state.dart';
 
 class LoginCubit extends Cubit<LoginState> {

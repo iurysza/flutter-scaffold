@@ -23,6 +23,7 @@ class MockNavigatorObserver extends Mock implements NavigatorObserver {}
 
 void main() {
   group("Given the app is opening", () {
+    // ignore: close_sinks
     final mockAuthBloc = MockAuthBloc();
     final mockServiceLocator = MockServiceLocator();
     NavigatorObserver mockObserver = MockNavigatorObserver();
@@ -39,6 +40,7 @@ void main() {
       var authenticatedState = AuthenticationState.authenticated(User(
         email: "fakeemail@gmail.com",
         id: "fakeId",
+        photo: "https://randomuser.me/api/portraits/men/46.jpg",
         name: "FakeName",
       ));
 
